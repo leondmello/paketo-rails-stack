@@ -4,8 +4,8 @@ FROM ubuntu:jammy as base
 # 2. Set required CNB information
 ENV CNB_USER_ID=1000
 ENV CNB_GROUP_ID=1000
-ENV CNB_STACK_ID="io.buildpacks.rails.stacks.jammy"
-LABEL io.buildpacks.stack.id="io.buildpacks.rails.stacks.jammy"
+ENV CNB_STACK_ID="io.buildpacks.stacks.jammy"
+LABEL io.buildpacks.stack.id="io.buildpacks.stacks.jammy"
 
 # 3. Create the user
 RUN groupadd cnb --gid ${CNB_GROUP_ID} && \

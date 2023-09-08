@@ -1,0 +1,20 @@
+description = "Base image with buildpack for Rails"
+
+[[buildpacks]]
+  uri = "docker://gcr.io/paketo-buildpacks/ruby:0.39.0"
+  version = "0.39.0"
+
+[lifecycle]
+  version = "0.17.0"
+
+[[order]]
+
+  [[order.group]]
+    id = "paketo-buildpacks/ruby"
+    version = "0.39.0"
+
+[stack]
+  build-image = "paketobuildpacks/build-jammy-full"
+  id = "io.buildpacks.stacks.jammy"
+  run-image = "cnbs/rails-stack-run:jammy"
+  run-image-mirrors = []

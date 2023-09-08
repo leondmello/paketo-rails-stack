@@ -1,4 +1,6 @@
-FROM cnbs/rails-stack-base:jammy as run
+FROM paketobuildpacks/run-jammy-full as run
+
+USER root
 
 RUN apt-get update && \
   apt-get install -y postgresql-client && \
